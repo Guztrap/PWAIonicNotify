@@ -3,6 +3,12 @@
     <ion-title>
       Notify
     </ion-title>
+    <ion-buttons slot="end">
+      <div *ngIf="online$ | async; else offline"></div>
+      <ng-template #offline>
+        
+      </ng-template>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
