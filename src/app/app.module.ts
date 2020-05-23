@@ -10,6 +10,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material';
+import { MATERIAL_COMPONENTS } from './app.material';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +22,11 @@ import { environment } from '../environments/environment';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
+    HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    BrowserAnimationsModule,
+    MATERIAL_COMPONENTS
+  ],
+
   providers: [
     StatusBar,
     SplashScreen,

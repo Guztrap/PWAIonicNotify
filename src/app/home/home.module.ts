@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { MatListModule, MatCardModule } from '@angular/material';
+import { MATERIAL_COMPONENTS } from '../app.material';
 
 @NgModule({
   imports: [
@@ -16,7 +18,8 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    MATERIAL_COMPONENTS
   ],
   declarations: [HomePage]
 })
